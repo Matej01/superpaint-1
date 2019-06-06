@@ -91,7 +91,8 @@ var superPaint = function() { // IIFE
     var bg = new Image();
     bg.src = image;
     bg.onload = function() {
-      _t.ctx.drawImage( bg, 0, 0 );
+      alert( 'image: '+bg.width+'/'+bg.height )
+      _t.ctx.drawImage( bg, 0, 0, $('#stage').width(), $('#stage').height() );
 
     }
   },
@@ -101,8 +102,8 @@ var superPaint = function() { // IIFE
       _t.addPhoto2Canvas,
       function() { alert( 'Camera Fehler' ); },
       {
-        targetWidth: $('#stage').width(),
-        targetHeight: $('#stage').height(),
+        targetWidth: 1000,
+        targetHeight: 1500,
         correctOrientation: true
       }
     )
