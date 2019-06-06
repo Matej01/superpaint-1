@@ -90,7 +90,6 @@ var superPaint = function() { // IIFE
   addPhoto2Canvas: function( image ) {
     var bg = new Image();
     bg.src = image;
-    // ... add2canvas ?
     bg.onload = function() {
       _t.ctx.drawImage( bg, 0, 0 );
 
